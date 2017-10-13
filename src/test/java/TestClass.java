@@ -6,46 +6,39 @@ public class TestClass {
 
 	@Test
 	public void testStudentMethods() {
-		Student student = new Student("jason", "17-12-1996");
-		Student student1 = new Student("jason", "17-12-1996");
+		Student jason = new Student("jason", "17-12-1996");
+		Student emer = new Student("emer", "17-12-1996");
 
-		assertTrue(student.getAge() == 20);
-		assertTrue(student.getName().equals("jason"));
-		assertTrue(student.getUserName().equals("jason20"));
-		assertTrue(student.getStudentId() != student1.getStudentId());
-	}
-
-	@Test
-	public void testModuleMethods() {
-		Student student = new Student("jason", "17-12-1996");
-		Student student1 = new Student("emer", "23-02-1990");
-		
-		Module module = new Module("Software Engineering", "CT417");
-		
-		module.addStudent(student);
-		module.addStudent(student1);
-		
-		assertTrue(module.getStudents().contains(student));
-		assertTrue(module.getStudents().contains(student1));
-		
-		assertTrue(module.getModuleId().equals("CT417"));
-		assertTrue(module.getModuleName().equals("Software Engineering"));
+		assertTrue(jason.getAge() == 20);
+		assertTrue(jason.getName().equals("jason"));
+		assertTrue(jason.getUserName().equals("jason20"));
+		assertTrue(jason.getStudentId() != emer.getStudentId());
 	}
 	
 	@Test
-	public void testCourseMethods() {
-		Student student = new Student("jason", "17-12-1996");
-		Student student1 = new Student("emer", "23-02-1990");
-		
-		Module module = new Module("Software Engineering", "CT417");
-		
-		module.addStudent(student);
-		module.addStudent(student1);
-		
-		CourseProgrammer course = new CourseProgrammer("BCT", "01-09-2014", "05-05-2018");
-		course.addModule(module);
-		
-		assertTrue(course.getModules().contains(module));
-		assertTrue(course.getCourseName().equals("BCT"));
+	public void testPrintOut() {
+		Student jason = new Student("Jason", "17-12-1996");
+		Student emer = new Student("Emer", "23-02-1990");
+
+		Module CT417 = new Module("Software Engineering", "CT417");
+		Module CT437 = new Module("Computer Security and Forensic Computing", "CT437");
+		Module CT436 = new Module("Advanced Professional Skills", "CT436");
+		Module CT421 = new Module("Artificial Intelligence", "CT421");
+
+		CourseProgrammer BCT = new CourseProgrammer("BCT", "01-09-2014", "05-05-2018");
+
+		BCT.addStudent(emer);
+		BCT.addStudent(jason);
+
+		emer.addModule(CT417);
+		jason.addModule(CT417);
+
+		emer.addModule(CT437);
+		jason.addModule(CT437);
+
+		emer.addModule(CT436);
+		jason.addModule(CT421);
+
+		System.out.println(BCT);
 	}
 }

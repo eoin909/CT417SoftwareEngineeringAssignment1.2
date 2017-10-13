@@ -41,7 +41,7 @@ public class Student {
 		return moduleList;
 	}
 	
-	String getUserName() {
+	public String getUserName() {
 		return userName;
 	}
 
