@@ -1,28 +1,22 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>testDriver</groupId>
-  <artifactId>1</artifactId>
+  <groupId>com.assignment1</groupId>
+  <artifactId>maven-demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-    <dependencies>
-	 <dependency>
+
+  <dependencies>
+	  <dependency>
 	    <groupId>junit</groupId>
 	    <artifactId>junit</artifactId>
 	    <version>4.8.1</version>
-	    <scope>src</scope>
+	    <scope>test</scope>
 	</dependency>
 	<dependency>
-	    <groupId>com.github.eoin909</groupId>
-	    <artifactId>CT417SoftwareEngineeringAssignment1</artifactId>
-	    <version>5b5173878c</version>
+	  <groupId>joda-time</groupId>
+	  <artifactId>joda-time</artifactId>
+	  <version>2.9.9</version>
 	</dependency>
 
 </dependencies>
 
-  <repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
-	
 </project>
